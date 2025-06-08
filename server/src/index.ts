@@ -106,7 +106,7 @@ const tools = [
       if (json.jsonrpc === "2.0") {
         if (json.method === "initialize") {
           sendResponse(json.id, {
-            protocolVersion: "2025-03-26",
+            protocolVersion: json.params.protocolVersion,
             capabilities: {
               tools: { listChanged: true },
               resources: { listChanged: true },
